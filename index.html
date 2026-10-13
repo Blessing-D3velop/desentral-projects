@@ -61,6 +61,8 @@
 
 <main id="main">
 <section class="hero" id="home">
+  <!-- HERO BACKGROUND: add your own photo as images/hero-bg.jpg (landscape, 1920px wide is ideal). -->
+  <div class="hero-bg"></div>
   <div class="orb o1"></div><div class="orb o2"></div>
   <div class="wrap hero-grid">
     <div class="hero-text">
@@ -69,6 +71,7 @@
       <p class="lead">From construction and renovations to paving, plumbing and waterproofing, we deliver dependable workmanship tailored to your project.</p>
       <p class="tagline">Your Demand, <em>Our Concern.</em></p>
       <div class="row"><a href="#quote" class="btn white">Request a Quote</a><a href="#services" class="btn ghost">Explore Our Services</a></div>
+      <div class="hero-stat"><b><span data-count="10">0</span>+</b><span>years of experience<br>in construction</span></div>
     </div>
     <div class="reel" aria-label="Illustrative construction imagery"><div class="col up"><img src="images/tiling.jpg" alt="Illustrative image: floor tiling"><img src="images/painting.jpg" alt="Illustrative image: wall painting"><img src="images/bathroom.jpg" alt="Illustrative image: modern bathroom"><img src="images/paving.jpg" alt="Illustrative image: block paving driveway"><img src="images/plumbing.jpg" alt="Illustrative image: plumbing work"><img src="images/demolition.jpg" alt="Illustrative image: excavator demolition"><span aria-hidden="true" class="dup"><img src="images/tiling.jpg" alt=""><img src="images/painting.jpg" alt=""><img src="images/bathroom.jpg" alt=""><img src="images/paving.jpg" alt=""><img src="images/plumbing.jpg" alt=""><img src="images/demolition.jpg" alt=""></span></div><div class="col down"><img src="images/paving.jpg" alt="Illustrative image: block paving driveway"><img src="images/plumbing.jpg" alt="Illustrative image: plumbing work"><img src="images/demolition.jpg" alt="Illustrative image: excavator demolition"><img src="images/tiling.jpg" alt="Illustrative image: floor tiling"><img src="images/painting.jpg" alt="Illustrative image: wall painting"><img src="images/bathroom.jpg" alt="Illustrative image: modern bathroom"><span aria-hidden="true" class="dup"><img src="images/paving.jpg" alt=""><img src="images/plumbing.jpg" alt=""><img src="images/demolition.jpg" alt=""><img src="images/tiling.jpg" alt=""><img src="images/painting.jpg" alt=""><img src="images/bathroom.jpg" alt=""></span></div><div class="reel-chip"><b>Residential</b><b>Commercial</b><b>Industrial</b></div></div>
   </div>
@@ -82,6 +85,11 @@
       <p class="label dark">About Us</p>
       <h2>Reliable Solutions. Quality Workmanship.</h2>
       <p>Desentral Projects &amp; Civil Works (Pty) Ltd provides construction, maintenance and property-improvement services for residential, commercial and industrial clients. We focus on dependable service, attention to detail and practical solutions tailored to each client's requirements.</p>
+      <!-- ABOUT / DONALD: edit the text below. To show his photo, save it as images/donald.jpg (it appears automatically). -->
+      <div class="profile">
+        <div class="avatar"><span>D</span><img src="images/donald.jpeg" alt="Donald of Desentral Projects &amp; Civil Works" onerror="this.remove()"></div>
+        <div><h3>Donald</h3><p>With over <b data-count="10">0</b>+ years in construction, Donald brings real industry experience to every Desentral project.</p></div>
+      </div>
     </div>
     <ul class="pillars">
       <li class="reveal"><svg class="ic"><use href="#i-shield"/></svg><div><h3>Quality Workmanship</h3><p>Attention to detail on every job.</p></div></li>
@@ -113,19 +121,46 @@
 
 <section class="section" id="projects">
   <div class="wrap">
-    <div class="head reveal"><p class="label dark">Our Projects</p><h2>Our work.</h2>
-      <p class="note">Illustrative images only. They are not completed Desentral projects. Replace the files in the images folder with real project photos.</p></div>
+    <div class="head reveal"><p class="label dark">Our Projects</p><h2>Our work.</h2></div>
     <div class="filters" role="group" aria-label="Filter gallery">
       <button class="on" data-f="all">All</button><button data-f="Tiling">Tiling</button><button data-f="Paving">Paving</button><button data-f="Painting">Painting</button><button data-f="Plumbing">Plumbing</button><button data-f="Renovations">Renovations</button><button data-f="Demolitions">Demolitions</button>
     </div>
+    <!-- GALLERY: 5 photo slots per category. Save photos in the images folder as
+       tiling-1 ... tiling-5, painting-1 ... painting-5, paving-, plumbing-, renovations-, demolitions-
+       (.jpg, .jpeg, .png or .webp). Slots with no file hide themselves. -->
     <div class="masonry" id="gallery">
-      <button class="g" data-cat="Tiling" type="button"><img src="images/tiling.jpg" alt="Illustrative image: floor tiling" loading="lazy"><span>Tiling</span></button>
-      <button class="g tall" data-cat="Painting" type="button"><img src="images/painting.jpg" alt="Illustrative image: wall painting" loading="lazy"><span>Painting</span></button>
-      <button class="g" data-cat="Paving" type="button"><img src="images/paving.jpg" alt="Illustrative image: block paving driveway" loading="lazy"><span>Paving</span></button>
-      <button class="g" data-cat="Plumbing" type="button"><img src="images/plumbing.jpg" alt="Illustrative image: plumbing work" loading="lazy"><span>Plumbing</span></button>
-      <button class="g tall" data-cat="Demolitions" type="button"><img src="images/demolition.jpg" alt="Illustrative image: excavator demolition" loading="lazy"><span>Demolitions</span></button>
-      <button class="g" data-cat="Renovations" type="button"><img src="images/bathroom.jpg" alt="Illustrative image: renovated bathroom" loading="lazy"><span>Renovations</span></button>
-    </div>
+      <button class="g" data-cat="Tiling" type="button"><img data-base="images/tiling-1" data-fb="images/tiling.jpg" alt="Tiling work 1" loading="lazy"><span>Tiling</span></button>
+      <button class="g" data-cat="Painting" type="button"><img data-base="images/painting-1" data-fb="images/painting.jpg" alt="Painting work 1" loading="lazy"><span>Painting</span></button>
+      <button class="g" data-cat="Paving" type="button"><img data-base="images/paving-1" data-fb="images/paving.jpg" alt="Paving work 1" loading="lazy"><span>Paving</span></button>
+      <button class="g" data-cat="Plumbing" type="button"><img data-base="images/plumbing-1" data-fb="images/plumbing.jpg" alt="Plumbing work 1" loading="lazy"><span>Plumbing</span></button>
+      <button class="g" data-cat="Renovations" type="button"><img data-base="images/renovations-1" data-fb="images/bathroom.jpg" alt="Renovations work 1" loading="lazy"><span>Renovations</span></button>
+      <button class="g" data-cat="Demolitions" type="button"><img data-base="images/demolitions-1" data-fb="images/demolition.jpg" alt="Demolitions work 1" loading="lazy"><span>Demolitions</span></button>
+      <button class="g" data-cat="Tiling" type="button"><img data-base="images/tiling-2" alt="Tiling work 2" loading="lazy"><span>Tiling</span></button>
+      <button class="g" data-cat="Painting" type="button"><img data-base="images/painting-2" alt="Painting work 2" loading="lazy"><span>Painting</span></button>
+      <button class="g" data-cat="Paving" type="button"><img data-base="images/paving-2" alt="Paving work 2" loading="lazy"><span>Paving</span></button>
+      <button class="g" data-cat="Plumbing" type="button"><img data-base="images/plumbing-2" alt="Plumbing work 2" loading="lazy"><span>Plumbing</span></button>
+      <button class="g" data-cat="Renovations" type="button"><img data-base="images/renovations-2" alt="Renovations work 2" loading="lazy"><span>Renovations</span></button>
+      <button class="g" data-cat="Demolitions" type="button"><img data-base="images/demolitions-2" alt="Demolitions work 2" loading="lazy"><span>Demolitions</span></button>
+      <button class="g" data-cat="Tiling" type="button"><img data-base="images/tiling-3" alt="Tiling work 3" loading="lazy"><span>Tiling</span></button>
+      <button class="g" data-cat="Painting" type="button"><img data-base="images/painting-3" alt="Painting work 3" loading="lazy"><span>Painting</span></button>
+      <button class="g" data-cat="Paving" type="button"><img data-base="images/paving-3" alt="Paving work 3" loading="lazy"><span>Paving</span></button>
+      <button class="g" data-cat="Plumbing" type="button"><img data-base="images/plumbing-3" alt="Plumbing work 3" loading="lazy"><span>Plumbing</span></button>
+      <button class="g" data-cat="Renovations" type="button"><img data-base="images/renovations-3" alt="Renovations work 3" loading="lazy"><span>Renovations</span></button>
+      <button class="g" data-cat="Demolitions" type="button"><img data-base="images/demolitions-3" alt="Demolitions work 3" loading="lazy"><span>Demolitions</span></button>
+      <button class="g" data-cat="Tiling" type="button"><img data-base="images/tiling-4" alt="Tiling work 4" loading="lazy"><span>Tiling</span></button>
+      <button class="g" data-cat="Painting" type="button"><img data-base="images/painting-4" alt="Painting work 4" loading="lazy"><span>Painting</span></button>
+      <button class="g" data-cat="Paving" type="button"><img data-base="images/paving-4" alt="Paving work 4" loading="lazy"><span>Paving</span></button>
+      <button class="g" data-cat="Plumbing" type="button"><img data-base="images/plumbing-4" alt="Plumbing work 4" loading="lazy"><span>Plumbing</span></button>
+      <button class="g" data-cat="Renovations" type="button"><img data-base="images/renovations-4" alt="Renovations work 4" loading="lazy"><span>Renovations</span></button>
+      <button class="g" data-cat="Demolitions" type="button"><img data-base="images/demolitions-4" alt="Demolitions work 4" loading="lazy"><span>Demolitions</span></button>
+      <button class="g" data-cat="Tiling" type="button"><img data-base="images/tiling-5" alt="Tiling work 5" loading="lazy"><span>Tiling</span></button>
+      <button class="g" data-cat="Painting" type="button"><img data-base="images/painting-5" alt="Painting work 5" loading="lazy"><span>Painting</span></button>
+      <button class="g" data-cat="Paving" type="button"><img data-base="images/paving-5" alt="Paving work 5" loading="lazy"><span>Paving</span></button>
+      <button class="g" data-cat="Plumbing" type="button"><img data-base="images/plumbing-5" alt="Plumbing work 5" loading="lazy"><span>Plumbing</span></button>
+      <button class="g" data-cat="Renovations" type="button"><img data-base="images/renovations-5" alt="Renovations work 5" loading="lazy"><span>Renovations</span></button>
+      <button class="g" data-cat="Demolitions" type="button"><img data-base="images/demolitions-5" alt="Demolitions work 5" loading="lazy"><span>Demolitions</span></button>
+      </div>
+    <p class="more-wrap"><button class="btn line" id="moreBtn" type="button" hidden>Show all photos</button></p>
   </div>
 </section>
 
@@ -217,8 +252,8 @@
   <button class="lb-n next" id="lbn" aria-label="Next image">&#8250;</button>
 </div>
 <div class="float" aria-label="Quick contact">
-  <a class="fab wa" href="https://wa.me/27640948066" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/><path d="M9 9c0 3 3 6 6 6l1.5-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg></a>
-  <a class="fab fb" href="https://www.facebook.com/Decentral" target="_blank" rel="noopener" aria-label="Visit us on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+  <a class="fab wa" data-tip="Chat on WhatsApp" href="https://wa.me/27640948066" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/><path d="M9 9c0 3 3 6 6 6l1.5-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg></a>
+  <a class="fab fb" data-tip="Find us on Facebook" href="https://www.facebook.com/Decentral" target="_blank" rel="noopener" aria-label="Visit us on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
 </div>
 <button class="top" id="top" aria-label="Back to top">&uarr;</button>
 <script src="script.js"></script>
