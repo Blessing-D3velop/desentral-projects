@@ -294,3 +294,20 @@ body{background:#fff}
 .sector span{transition:transform .6s,color .4s}.sector:hover span{transform:translateY(8px) scale(1.15);color:#d8deea}
 .mtrack:hover{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.g,.hero-stat,.fab{opacity:1;clip-path:none;transform:none}}
+.ns{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.ns img{width:100%;height:auto}
+
+/* ===== MOBILE NAV FIX =====
+   Cause: a header with backdrop-filter becomes the containing block for its
+   position:fixed children, so the full-screen menu collapsed to the header's
+   height after scrolling. The frosted glass now lives on a pseudo-element. */
+.header.solid{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;border-bottom:0}
+.header::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:rgba(255,255,255,.78);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border-bottom:1px solid rgba(7,29,73,.08);box-shadow:0 2px 20px rgba(7,29,73,.12);transition:opacity .4s}
+.header.solid::before{opacity:1}
+.header.menu-open::before{opacity:0}
+@media(max-width:860px){
+ .menu{height:100vh;height:100dvh;overflow-y:auto;padding:96px 24px 40px;align-items:center;text-align:center;overscroll-behavior:contain}
+ .menu a:not(.btn){font-size:clamp(24px,7vw,30px)}
+ .header.menu-open,.header.menu-open.solid{color:#fff}
+ .burger{margin-right:-8px}
+}
+@media(max-width:860px){.menu .menu-cta{background:#fff;color:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.35)}.menu .menu-cta:hover{background:var(--light)}}

@@ -1,0 +1,20 @@
+{
+ "name": "Desentral Projects & Civil Works",
+ "short_name": "Desentral",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#06173d",
+ "icons": [
+  {
+   "src": "images/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "images/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
