@@ -86,6 +86,7 @@ I also made sure the website had the basic technical SEO foundations needed for 
 I'm **Blessing Muthivhi**, a web developer and founder of Blessing Dev Solutions.
 
 I build websites for businesses with a focus on modern design, responsive layouts, functionality and search engine optimisation.
+<img width="1600" height="1000" alt="decentral-projects" src="https://github.com/user-attachments/assets/c0f8b107-bd63-4696-8b1c-974422e37598" />
 
 **GitHub:** https://github.com/Blessing-D3velop
 
